@@ -1,0 +1,154 @@
+.slider{
+	width: 100%;
+	transition: all 0.5s ease 0.4s;
+}
+.slide{
+	transition: all 0.4s ease 0s;
+	height: 100vh;
+	background: black;
+	&__container{
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
+	&__column{
+		flex: 0 1 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		&_right{
+			align-items: center;
+			position: relative;
+		}
+	}
+	&__title{
+		font-size: 65px;
+		margin-bottom: 7px;
+	}
+	&__title-flag{
+		width: 30px;
+		height: 5px;
+		border-radius: 20px;
+		margin-bottom: 30px;
+	}
+}
+.list-slide{
+	&__el{
+		color: #fff;
+		margin-bottom: 20px;
+		font-size: 22px;
+		position: relative;
+		padding-left: 20px;
+		line-height: 110%;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		&::before{
+			content: "";
+			position: absolute;
+			top: 5px;
+			left: 0;
+			width: 10px;
+			height: 10px;
+			background: #fff;
+			border-radius: 50%;
+		}
+	}
+}
+.planet-slide{
+	width: 390px;
+	height: 390px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	&__message{
+		max-width: 300px;
+		font-size: 80px;
+		line-height: 110%;
+	}
+	&__number{
+		position: absolute;
+		bottom: 20%;
+		right: 0;
+		color: #fff;
+		font-size: 70px;
+	}
+}
+
+@media (max-height: 660px), (max-width: 1263px) {
+	.slide{
+		&__title{
+			font-size: 50px;
+		}
+	}
+	.list-slide{
+		&__el{
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+	}
+}
+@media (max-width: 910px), (max-height: 615px) {
+	.planet-slide{
+		width: 270px;
+		height: 270px;
+		&__message{
+			font-size: 60px;
+		}
+		&__number{
+			font-size: 65px;
+		}
+	}
+}
+@media (max-height: 610px), (max-width: 992px) {
+	.slider{
+		padding-top: 115px;
+	}
+	.slide{
+		height: 100%;
+		border-bottom: 1px solid rgba(114, 114, 114, 0.699);
+		padding-bottom: 20px;
+		margin-bottom: 78px;
+		&__container{
+			flex-direction: column;
+		}
+		&__column{
+			flex: 0 1 100%;
+			&:first-child{
+				order: 2;
+			}
+			&:last-child{
+				order: 1;
+			}
+			&_right{
+				margin-bottom: 25px;
+			}
+		}
+		&__title{
+			display: none;
+		}
+		&__title-flag{
+			display: none;
+		}
+		&:last-child{
+			border-bottom: none;
+			margin: 0;
+		}
+	}
+	.planet-slide{
+		&__number{
+			display: none;
+		}
+	}
+}
+@media (max-width: 450px) {
+	.planet-slide{
+		width: 200px;
+		height: 200px;
+		&__message{
+			font-size: 30px;
+		}
+	}
+}

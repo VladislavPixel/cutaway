@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap&subset=cyrillic-ext");
+@import "./ziro";
+
+.wrapper{
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	background: black;
+}
+@media (max-height: 610px), (max-width: 992px) {
+	.wrapper{
+		height: 100%;
+	}
+}
+._container{
+	max-width: 1250px;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0px 15px;
+}
+
+@import "./header";
+@import "./slider";
+@import "./menuHeader";
+@import "./contentBlock";
